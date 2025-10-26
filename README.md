@@ -20,6 +20,10 @@ This website provides information about the Notion Spotify Playlist application,
 - CSS3 (with custom properties and animations)
 - Vanilla JavaScript (no framework dependencies)
 
+## Deployment
+
+This site is automatically deployed to GitHub Pages when changes are pushed to the `main` branch. The deployment is handled by a GitHub Actions workflow.
+
 ## Local Development
 
 Simply open `index.html` in your web browser. No build process required!
@@ -28,6 +32,9 @@ Simply open `index.html` in your web browser. No build process required!
 
 ```
 .
+├── .github/
+│   └── workflows/
+│       └── deploy-pages.yml  # GitHub Pages deployment workflow
 ├── index.html       # Main HTML file
 ├── styles.css       # CSS styling
 ├── script.js        # JavaScript functionality
