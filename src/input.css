@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scroll behavior for smooth navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations for intersection observer */
+@layer utilities {
+  .animate-observe {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  .animate-observe.observed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Active navigation link style */
+.nav-link.active-nav {
+  color: #1DB954;
+}

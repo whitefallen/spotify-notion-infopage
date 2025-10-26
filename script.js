@@ -17,7 +17,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Add scroll effect to navigation
-const header = document.querySelector('.header');
+const header = document.querySelector('header.fixed');
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
@@ -58,14 +58,6 @@ document.querySelectorAll('.step').forEach((step, index) => {
     step.style.transform = 'translateY(30px)';
     step.style.transition = `opacity 0.6s ease ${index * 0.15}s, transform 0.6s ease ${index * 0.15}s`;
     observer.observe(step);
-});
-
-// Observe requirement items
-document.querySelectorAll('.requirement-item').forEach((item, index) => {
-    item.style.opacity = '0';
-    item.style.transform = 'translateY(30px)';
-    item.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-    observer.observe(item);
 });
 
 // Add active state to navigation links based on scroll position
