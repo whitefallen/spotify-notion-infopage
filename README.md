@@ -17,16 +17,40 @@ This website provides information about the Notion Spotify Playlist application,
 ## Technologies Used
 
 - HTML5
-- CSS3 (with custom properties and animations)
+- **Tailwind CSS** - Utility-first CSS framework for styling
 - Vanilla JavaScript (no framework dependencies)
-
-## Deployment
-
-This site is automatically deployed to GitHub Pages when changes are pushed to the `main` branch. The deployment is handled by a GitHub Actions workflow.
 
 ## Local Development
 
-Simply open `index.html` in your web browser. No build process required!
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Build the CSS:
+   ```bash
+   npm run build:css
+   ```
+
+3. Open `index.html` in your web browser, or use a local server:
+   ```bash
+   python3 -m http.server 8080
+   ```
+
+## Build Process
+
+The project uses Tailwind CSS for styling. To build the CSS:
+
+- **Build for production**: `npm run build:css` (minified)
+- **Watch mode for development**: `npm run watch:css` (rebuilds on changes)
+
+## Deployment
+
+This site is automatically deployed to GitHub Pages when changes are pushed to the `main` branch. The deployment is handled by a GitHub Actions workflow that:
+
+1. Installs Node.js dependencies
+2. Builds the Tailwind CSS
+3. Deploys to GitHub Pages
 
 ## Project Structure
 
@@ -35,10 +59,14 @@ Simply open `index.html` in your web browser. No build process required!
 ├── .github/
 │   └── workflows/
 │       └── deploy-pages.yml  # GitHub Pages deployment workflow
-├── index.html       # Main HTML file
-├── styles.css       # CSS styling
-├── script.js        # JavaScript functionality
-└── README.md        # This file
+├── src/
+│   └── input.css             # Tailwind CSS source file
+├── index.html                # Main HTML file
+├── styles.css                # Built CSS (generated from src/input.css)
+├── script.js                 # JavaScript functionality
+├── package.json              # Node.js dependencies and scripts
+├── tailwind.config.js        # Tailwind CSS configuration
+└── README.md                 # This file
 ```
 
 ## Related Projects

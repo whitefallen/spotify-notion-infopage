@@ -1,0 +1,19 @@
+{
+  "name": "spotify-notion-infopage",
+  "version": "1.0.0",
+  "description": "Informative website for the Notion Spotify Playlist project",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./styles.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./styles.css --watch"
+  },
+  "keywords": [
+    "spotify",
+    "notion",
+    "playlist"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
