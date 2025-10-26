@@ -17,7 +17,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Add scroll effect to navigation
-const header = document.querySelector('header');
+const header = document.querySelector('header.fixed');
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
