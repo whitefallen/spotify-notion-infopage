@@ -17,7 +17,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Add scroll effect to navigation
-let lastScroll = 0;
 const header = document.querySelector('.header');
 
 window.addEventListener('scroll', () => {
@@ -28,8 +27,6 @@ window.addEventListener('scroll', () => {
     } else {
         header.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
     }
-
-    lastScroll = currentScroll;
 });
 
 // Add animation to elements when they come into view
@@ -84,9 +81,9 @@ window.addEventListener('scroll', () => {
 
         if (navLink && scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
             document.querySelectorAll('.nav-link').forEach(link => {
-                link.style.color = '';
+                link.classList.remove('active-nav');
             });
-            navLink.style.color = 'var(--primary-color)';
+            navLink.classList.add('active-nav');
         }
     });
 });

@@ -67,7 +67,8 @@ body {
     font-weight: 500;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active-nav {
     color: var(--primary-color);
 }
 
@@ -133,13 +134,7 @@ body {
     transform: scale(1.1) rotate(5deg);
 }
 
-.notion-logo {
-    /* SVG styling handled inline */
-}
 
-.spotify-logo {
-    /* SVG styling handled inline */
-}
 
 .plus-icon {
     font-size: 2rem;
