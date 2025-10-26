@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Notion Spotify Playlist - Automatically create monthly Spotify playlists from your Notion artist database">
+    <title>Notion Spotify Playlist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-content">
+                    <h1 class="logo">Notion Spotify Playlist</h1>
+                    <ul class="nav-menu">
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#features" class="nav-link">Features</a></li>
+                        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                        <li><a href="https://github.com/whitefallen/notion-spotify-playlist" class="nav-link btn-primary" target="_blank">View on GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Automate Your Music Discovery</h2>
+                <p class="hero-subtitle">Transform your Notion artist database into dynamic monthly Spotify playlists featuring the latest releases from your favorite artists.</p>
+                <div class="hero-logos">
+                    <!-- Notion Logo SVG -->
+                    <svg class="logo-img notion-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="100" height="100" rx="15" fill="#ffffff"/>
+                        <path d="M20 25h60v50H20z" fill="none"/>
+                        <rect x="30" y="35" width="40" height="5" rx="2.5" fill="#000000"/>
+                        <rect x="30" y="47.5" width="30" height="5" rx="2.5" fill="#000000"/>
+                        <rect x="30" y="60" width="35" height="5" rx="2.5" fill="#000000"/>
+                    </svg>
+                    <span class="plus-icon">+</span>
+                    <!-- Spotify Logo SVG -->
+                    <svg class="logo-img spotify-logo" viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#1DB954" d="M248 8C111.1 8 0 119.1 0 256s111.1 248 248 248 248-111.1 248-248S384.9 8 248 8zm100.7 364.9c-4.2 0-6.8-1.3-10.7-3.6-62.4-37.6-135-39.2-206.7-24.5-3.9 1-9 2.6-11.9 2.6-9.7 0-15.8-7.7-15.8-15.8 0-10.3 6.1-15.2 13.6-16.8 81.9-18.1 165.6-16.5 237 26.2 6.1 3.9 9.7 7.4 9.7 16.5s-7.1 15.4-15.2 15.4zm26.9-65.6c-5.2 0-8.7-2.3-12.3-4.2-62.5-37-155.7-51.9-238.6-29.4-4.8 1.3-7.4 2.6-11.9 2.6-10.7 0-19.4-8.7-19.4-19.4s5.2-17.8 15.5-20.7c27.8-7.8 56.2-13.6 97.8-13.6 64.9 0 127.6 16.1 177 45.5 8.1 4.8 11.3 11 11.3 19.7-.1 10.8-8.5 19.5-19.4 19.5zm31-76.2c-5.2 0-8.4-1.3-12.9-3.9-71.2-42.5-198.5-52.7-280.9-29.7-3.6 1-8.1 2.6-12.9 2.6-13.2 0-23.3-10.3-23.3-23.6 0-13.6 8.4-21.3 17.4-23.9 35.2-10.3 74.6-15.2 117.5-15.2 73 0 149.5 15.2 205.4 47.8 7.8 4.5 12.9 10.7 12.9 22.6 0 13.6-11 23.3-23.2 23.3z"/>
+                    </svg>
+                </div>
+                <a href="https://github.com/whitefallen/notion-spotify-playlist" class="btn-cta" target="_blank">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">What is Notion Spotify Playlist?</h2>
+            <div class="about-content">
+                <p>Notion Spotify Playlist is a powerful automation tool built with Symfony PHP that bridges the gap between your Notion workspace and Spotify. It automatically creates and updates monthly playlists based on your curated artist list stored in Notion.</p>
+                <p>Never miss new releases from your favorite artists again. This tool continuously monitors your artist database and keeps your playlists fresh with the latest tracks.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎵</div>
+                    <h3>Notion Integration</h3>
+                    <p>Store and manage your favorite artists in Notion, giving you full control over your music library with a familiar interface.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎧</div>
+                    <h3>Spotify API</h3>
+                    <p>Leverages the Spotify API to fetch the latest tracks from your artists and automatically add them to your playlist.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Monthly Playlists</h3>
+                    <p>Creates a new playlist each month or updates the existing one with fresh releases from your tracked artists.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Automated Updates</h3>
+                    <p>Runs as a scheduled CRON job, ensuring your playlists are always up-to-date without any manual intervention.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🐳</div>
+                    <h3>Docker Ready</h3>
+                    <p>Easily deployable using Docker, making setup and maintenance a breeze across different environments.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Built with Symfony</h3>
+                    <p>Powered by PHP 8.1 and the robust Symfony framework for reliable and maintainable performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Set Up Your Notion Database</h3>
+                        <p>Create a Notion database with your favorite artists. Add artist names to your collection.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Configure API Credentials</h3>
+                        <p>Set up your Notion API key and Spotify API credentials in the application configuration.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Deploy with Docker</h3>
+                        <p>Use Docker Compose to build and deploy the application with a single command.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Enjoy Automated Playlists</h3>
+                        <p>The CRON job runs monthly, fetching new tracks and updating your Spotify playlist automatically.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements Section -->
+    <section class="requirements">
+        <div class="container">
+            <h2 class="section-title">Requirements</h2>
+            <div class="requirements-grid">
+                <div class="requirement-item">
+                    <span class="requirement-icon">🐘</span>
+                    <span>PHP 8.1</span>
+                </div>
+                <div class="requirement-item">
+                    <span class="requirement-icon">🐳</span>
+                    <span>Docker</span>
+                </div>
+                <div class="requirement-item">
+                    <span class="requirement-icon">🔑</span>
+                    <span>Notion API Credentials</span>
+                </div>
+                <div class="requirement-item">
+                    <span class="requirement-icon">🎵</span>
+                    <span>Spotify API Credentials</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Get Started?</h2>
+            <p>Clone the repository and start automating your music discovery today!</p>
+            <div class="cta-buttons">
+                <a href="https://github.com/whitefallen/notion-spotify-playlist" class="btn-cta" target="_blank">View on GitHub</a>
+                <a href="https://github.com/whitefallen/notion-spotify-playlist#installation" class="btn-secondary" target="_blank">Read Documentation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Notion Spotify Playlist. Open Source Project.</p>
+            <div class="footer-links">
+                <a href="https://github.com/whitefallen/notion-spotify-playlist" target="_blank">GitHub</a>
+                <a href="https://github.com/whitefallen/notion-spotify-playlist/issues" target="_blank">Issues</a>
+                <a href="https://github.com/whitefallen/notion-spotify-playlist#license" target="_blank">License</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
